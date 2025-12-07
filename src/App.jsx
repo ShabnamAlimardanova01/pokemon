@@ -44,19 +44,28 @@ export default function App() {
     <div
       style={{
         textAlign: "center",
-        background: "#dff3ff",
-        padding: 20,
+        background: "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)",
+        minHeight: "100vh",
+        padding: "30px 20px",
       }}
     >
-      <h1>Pokémon Team Manager</h1>
+      <h1 style={{ 
+        color: "white", 
+        textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+        marginBottom: "30px",
+        fontSize: "2.5em"
+      }}>
+        ⚡ Pokémon Team Manager ⚡
+      </h1>
 
     
       <div
         style={{
           display: "flex",
           justifyContent: "center",
-          gap: 20,
+          gap: 25,
           flexWrap: "wrap",
+          marginBottom: "50px",
         }}
       >
         {pokemonList.map((p) => (
@@ -68,7 +77,14 @@ export default function App() {
         ))}
       </div>
 
-      <h2>Your Pokémon Team</h2>
+      <h2 style={{ 
+        color: "white", 
+        textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+        marginTop: "40px",
+        marginBottom: "20px"
+      }}>
+        Your Pokémon Team
+      </h2>
 
       <TeamList
         team={team}
@@ -77,9 +93,24 @@ export default function App() {
         deletePokemon={deletePokemon}
       />
 
-      <h2>Total Pokémon in Team: {totalPokemon}</h2>
+      <h2 style={{ 
+        color: "white", 
+        textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+        marginTop: "40px",
+        marginBottom: "20px",
+        fontSize: "1.8em"
+      }}>
+        Total Pokémon in Team: <span style={{ color: "#ffd700" }}>{totalPokemon}</span>
+      </h2>
 
-      <h3>Individual Pokémon Count</h3>
+      <h3 style={{ 
+        color: "white", 
+        textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+        marginTop: "30px",
+        marginBottom: "20px"
+      }}>
+        Individual Pokémon Count
+      </h3>
 
       <PokemonTable team={team} />
     </div>
